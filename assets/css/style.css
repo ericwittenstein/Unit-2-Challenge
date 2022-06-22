@@ -1,0 +1,167 @@
+/* sets overall page to be full-bleed, and sets universal page font family */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
+    --CarolinaBlue: #7BAFD4;
+    --NavyBlue: #13294B;
+    --BackgroundBlue: #0072bb;
+}
+
+/* sets background page color and default font family for the page */
+body {
+    background-color: var(--CarolinaBlue);
+    color: white;
+}
+
+/* sets the top banner color and background color */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--NavyBlue);
+}
+
+/* sets format for the navigation bar name display */
+.navName {
+    display: flex;
+    font-size: 40px;
+}
+
+/* sets layout for navigation links at the top of the page */
+header navItems {
+    padding-top: 10px;
+    margin-right: 10px;
+    float: right;
+    font-size: 25px;
+}
+
+/* sets spacing for individual navigation links */
+header navItems ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* sets the visual look of the navigation links to plain white text rather than underlined or blue */
+a {
+    color: white;
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+/* generates the head banner image */
+.banner {
+    height: 200px;
+    width: auto;
+    background-image: url("../images/titleBanner.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* sets the layout, spacing, and background color of the main page elements */
+.mainElement {
+    display: inline-block;
+    margin: 20px;
+    padding: 5px;
+    background-color: var(--BackgroundBlue);
+    font-size: 25px;
+}
+
+/* places the image to the left of the text */
+.leftImg {
+    height: 90%;
+    float: left;
+    margin: 1%;
+}
+
+/* formats the <h2> tag */
+h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+/* formats the <h3> tag */
+h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 25px;
+}
+
+/* formats for the projects box, spacing, background, font size, and text alignment */
+.projects {
+    margin: 20px;
+    padding: 10px;
+    background-color: var(--BackgroundBlue);
+    font-size: 25px;
+    text-align: center;
+}
+
+/* formats the projects section to display as a flexbox */
+projDisplay {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* formats the individual project tiles to display next to each other */
+projCard {
+    flex: 1 0;
+    padding: 10px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* formats the individual project images to have uniform formatting */
+projCard img {
+    padding: 1%;
+    margin: 1px;
+    width: 100%;
+    background-color: lightsteelblue;
+}
+
+/* formats title box for each project */
+projCard h2 {
+    padding: 10px;
+    background: #13294B;
+    color: white;
+}
+
+/* formats for the contact info box, spacing, background, font size, and text alignment */
+.contact {
+    margin: 20px;
+    padding: 10px;
+    background-color: var(--BackgroundBlue);
+    font-size: 25px;
+    text-align: center;
+}
+
+/* sets the margins, size, color, font family, and alignment of the footer */
+footer {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* resizes certain elements and spacing based on screen size */
+@media screen and (max-width: 1000px) {
+    /* resize navbar name */
+    .navName {
+        font-size: 30px;
+    }
+    /* resize navbar items */
+    header navItems {
+        padding-top: 0px;
+    }
+    /* reduce size of navbar links */
+    header navItems ul li a {
+        font-size: 20px;
+    }
+    /* reduce size of project images */
+    .projects img {
+        width: 49%;
+    }
+}
